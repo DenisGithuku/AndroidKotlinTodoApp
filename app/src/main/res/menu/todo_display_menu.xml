@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/filter_icon"
+        android:title="@string/filter"
+        android:id="@+id/filter_action">
+        <menu>
+            <item android:id="@+id/all_todos"
+                app:showAsAction="never"
+                android:title="@string/all_todos" />
+            <item android:id="@+id/active_todos"
+                app:showAsAction="never"
+                android:title="Active" />
+            <item android:id="@+id/completed_todos"
+                app:showAsAction="never"
+                android:title="Completed" />
+        </menu>
+    </item>
+    <item android:id="@+id/mark_all"
+        app:showAsAction="never"
+        android:title="@string/mark_all" />
+</menu>

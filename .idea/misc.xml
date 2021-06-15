@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/add_icon.xml" value="0.221" />
+        <entry key="app/src/main/res/layout/todo_display_fragment.xml" value="0.13" />
+        <entry key="app/src/main/res/layout/todo_item.xml" value="0.16" />
+        <entry key="app/src/main/res/menu/todo_display_menu.xml" value="0.15032894736842106" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

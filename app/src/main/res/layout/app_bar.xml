@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+                android:background="@color/white"
+                app:liftOnScroll="true" >
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:expandedTitleMarginStart="72dp"
+                    app:expandedTitleMarginBottom="28dp"
+                    app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+                    app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="match_parent"
+                    android:elevation="0dp"
+                    app:title="@string/page_title"
+                    app:navigationIcon="@drawable/ic_menu"
+                    style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+                    app:menu="@menu/todo_display_menu"
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    android:layout_height="?attr/actionBarSize"
+                    tools:targetApi="lollipop" />
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

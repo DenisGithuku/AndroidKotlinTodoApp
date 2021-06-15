@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/todoDisplayFragment">
+    <dialog
+        android:id="@+id/addTodoFragment"
+        android:name="com.gitsoft.todolist.ui.add_todo.AddTodoFragment"
+        android:label="New Task"
+        tools:layout="@layout/add_todo_fragment" >
+        <action
+            android:id="@+id/action_addTodoFragment_to_todoDisplayFragment"
+            app:destination="@id/todoDisplayFragment"
+            app:popUpTo="@id/todoDisplayFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="itemId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+
+    </dialog>
+    <fragment
+        android:id="@+id/todoDisplayFragment"
+        android:name="com.gitsoft.todolist.ui.todo_list.TodoDisplayFragment"
+        android:label="My Tasks"
+        tools:layout="@layout/todo_display_fragment" >
+        <action
+            android:id="@+id/action_todoDisplayFragment_to_addTodoFragment"
+            app:destination="@id/addTodoFragment"
+            app:popUpTo="@id/addTodoFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_todoDisplayFragment_to_viewTodoFragment"
+            app:destination="@id/viewTodoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewTodoFragment"
+        tools:layout="@layout/view_todo_fragment"
+        android:name="com.gitsoft.todolist.ui.view_todo.ViewTodoFragment"
+        android:label="This Task">
+
+        <argument
+            android:name="todo"
+            app:argType="com.gitsoft.todolist.model.Todo" />
+        <action
+            android:id="@+id/action_viewTodoFragment_to_todoDisplayFragment"
+            app:destination="@id/todoDisplayFragment"
+            app:popUpTo="@id/todoDisplayFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

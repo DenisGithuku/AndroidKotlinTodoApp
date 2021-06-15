@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TodoList</string>
+    <string name="todoTitle">Title</string>
+    <string name="todoDesc">Description</string>
+    <string name="add_todo_button">Add Todo</string>
+    <string name="no_todo_text">Click on the + button to add a new todo</string>
+    <string name="save_note">Save Note</string>
+    <string name="search">Search</string>
+    <string name="sort_by">Sort By</string>
+    <string name="priority_high">Priority High</string>
+    <string name="priority_low">Priority Low</string>
+    <string name="delete_all">Delete All</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="my_todos">My Todos</string>
+    <string name="add_todo_fab">Add Todo Fab</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="page_title">My Tasks</string>
+    <string name="mark_as_completed">Mark as completed</string>
+    <string name="mark_all">Mark all as complete</string>
+    <string name="search_hint">Search Task…</string>
+    <string name="mark_complete">Mark complete</string>
+    <string name="sort">Sort</string>
+    <string name="update">Update</string>
+    <string name="filter">Filter</string>
+    <string name="all_todos">All Todos</string>
+</resources>

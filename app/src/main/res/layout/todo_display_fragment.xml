@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.gitsoft.todolist.ui.todo_list.TodoDisplayViewModel" />
+    </data>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context=".ui.todo_list.TodoDisplayFragment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:text="@string/no_todo_text"
+                android:visibility="@{viewModel.allTodos.empty ? View.VISIBLE : View.GONE}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_item"
+                    todos="@{viewModel.allTodos}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/todo_item" />
+            </androidx.core.widget.NestedScrollView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/nav_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="18dp"
+                android:tintMode="@color/white"
+                android:contentDescription="@string/add_todo_fab"
+                android:onClick="@{() -> viewModel.onNavigateToNewTodo()}"
+                android:outlineSpotShadowColor="@color/blue_fade"
+                android:src="@drawable/add_icon"
+                app:backgroundTint="@color/blue"
+                app:elevation="20dp"
+                app:rippleColor="@color/blue"
+                tools:ignore="VectorDrawableCompat"
+                tools:targetApi="p" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>
